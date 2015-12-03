@@ -1,4 +1,4 @@
-#Webscrape - Fabrics on Etsy updated 12/3
+#Webscrape - Fabrics on Etsy updated 12/3, part 2
 
 #Importing needed functions from our library#
 
@@ -6,6 +6,7 @@ from ProjectLibrary import download_image
 from ProjectLibrary import build_dictionary
 from ProjectLibrary import Etsy_Website_Scraper
 from ProjectLibrary import Etsy_Images_Scraper
+import os
 import itertools    #need this to merge list of lists into one big list
 
 #next I will open a list to iterate through
@@ -32,6 +33,10 @@ merged_images = list(itertools.chain(*scraped_images_list))     #this will unpac
 #print(len(merged_images)) - prints # of images if needed
 
 etsy_dictionary = build_dictionary(merged_websites,merged_images) #creates dictionary for direct purchase website & matching image
+
+create_folder = os.path.dirname(os.path.abspath(__file__)) #returns the path name to create a folder on a given computer
+destination = os.path.join(create_folder,'C:','Group14') #merges that path name with any other given directory information
+os.makedirs(destination) #tell python to create the specified folder based on the path name and given directory information above
 
 for i in merged_images:
     download_image(i)       #this function downloads and saves each image

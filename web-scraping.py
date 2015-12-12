@@ -17,7 +17,7 @@ temp_sites = temp_sites.replace('"',"")
 website_list = temp_sites.split()
 website_file.close()
 
-scraped_sites_list = []     #empty list to hold a list of lists for all scraped sites
+scraped_sites_list = []     #empty list to hold a list of lists for all scraped site
 scraped_images_list = []    #empty list to hold a list of lists for all scraped images
 
 for site in website_list:

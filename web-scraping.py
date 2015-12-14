@@ -4,8 +4,8 @@
 
 from ProjectLibrary import download_image
 from ProjectLibrary import List_Ops
-from ProjectLibrary import scrapedSites
-from ProjectLibrary import scrapedImages
+from ProjectLibrary import scrapedsites
+from ProjectLibrary import scrapedimages
 from ProjectLibrary import MakeDictionary
 import os           #need this to make a folder to save the images in  
 
